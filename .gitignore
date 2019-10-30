@@ -23,3 +23,4 @@ erl_crash.dump
 minimal_server-*.tar
 
 .elixir_ls
+.env

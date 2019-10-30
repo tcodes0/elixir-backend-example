@@ -29,8 +29,8 @@ defmodule MinimalServer.Endpoint do
   end
 
   def start_link(_opts) do
-    config = Application.fetch_env(:minimal_server, __MODULE__)
-    info("Starting server at http://localhost:/#{inspect(config)}")
-    Plug.Cowboy.http(__MODULE__, [])
+    port = System.get_env("PORT", "4000") |> String.to_integer
+    info("Starting server at http://localhost:#{port}")
+    Plug.Cowboy.http(__MODULE__, [], port: port)
   end
 end
