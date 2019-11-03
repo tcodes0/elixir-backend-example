@@ -4,7 +4,7 @@
 
 - clone
 - copy .env.example to .env
-- `source .env` to copy vars to shell env
+- `source ./scripts/env-export.sh` to copy vars to shell env
 - `mix run --no-halt` to start server
 
 ## Changelog
